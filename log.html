@@ -1,0 +1,36 @@
+<html>
+	<head>
+	<title>
+		login page
+	</title>
+	<script type = "text/javascript">
+	function validateForm() {
+	var u = document.getElementById("name").value;
+	var p = document.getElementById("pw").value;
+	if(u==""){
+	alert("please enter valid username");
+	return false;
+	}
+	if(p==""){
+	alert("please enter valid password");
+	return false;
+	}
+	}
+	</script>
+	<style>
+	div{
+	padding:150px;
+	}
+	</style>
+	</head>
+	<body bgcolor="AntiqueWhite">
+		<div><center><h1 style="color:blue">login page </h1><h3>A-Z BOOK STORE</h3><br>
+		<form action="home.html" method="post" onsubmit="return validateForm()" target="_blank">user name:
+		<input type="text" id="name"><br><br>
+		password:
+		<input type="password" id="pw"><br><br>
+		<input type="submit" value="submit">
+		<a href="reg.html">new users register here</a>
+		</center></form></div>
+	</body>
+</html>

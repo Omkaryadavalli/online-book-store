@@ -1,0 +1,69 @@
+<html>
+	<head>
+	<title>registration page</title>
+	<style>
+	div{
+	padding:100px;
+	}
+	</style>
+	<script type = "text/javascript">
+	function validateForm() {
+	var u = document.getElementById("username").value;
+	var p = document.getElementById("password").value;
+	var e = document.getElementById("email").value;
+	var validRegex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+.com$/;
+	var s=document.getElementById("sex").value;
+	var a=document.getElementById("add").value;
+	if(u==""){
+	alert("please enter valid username");
+	return false;
+	}
+	if(p==""){
+	alert("please enter valid password");
+	return false;
+	}
+	if(e.match(validRegex))
+	{
+
+	}
+	else
+	{
+	alert("enter valid email");
+	return false;
+	}
+	if(s=="")
+	{
+	  alert("select gender");
+	  return false;
+	}
+	if(a=="")
+	{
+	 alert("fill the address");
+	 return false;
+	}
+	
+	}
+	</script>
+	</head>
+	<body bgcolor="AntiqueWhite">
+		<div><center><b><h1 style ="color:blue">registration page</h1></b><br><br>
+		<form  action="home.html" method="GET" onsubmit="return validateForm()" target="_blank">
+		user id:
+		<input type="text" id="username"><br><br>
+		password:
+		<input type="password" id="password"><br><br>
+		email id:
+		<input type="text" id="email"><br><br>
+		<input type="radio" id="sex">
+		male
+		<input type="radio" id="sex">
+		female<br><br>
+		address
+		<textarea name="add" value=" " maxlength="20" rows="4" cols="20" id="add"></textarea><br><br>
+		<input type="submit" value="submit">
+		<input type="reset" value="reset"></form>
+		</center></div>
+
+
+	</body>
+</html>
